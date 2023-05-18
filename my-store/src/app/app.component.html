@@ -10,3 +10,11 @@
 <input type="text" [value]="person.name">
 <progress max="100" [value]="person.age"></progress>
 <img width="100" [src]="person.avatar">
+
+<hr>
+<h1>Eventos</h1>
+<button [disabled]="btnDisabled">Enviar</button>
+<button (click)="toggleButton()">Toggle button</button>
+
+<p>Edad {{ person.age }}</p>
+<button (click)="increaseAge()">Age ++</button>
