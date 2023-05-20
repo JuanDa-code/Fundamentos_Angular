@@ -1,4 +1,4 @@
-<h1>Hola mundo</h1>
+<!-- <h1>Hola mundo</h1>
 <h2>{{ 'Hola mundo'.repeat(5) }}</h2>
 <p>3 + 3 = {{ 3 + 3 }}</p>
 <h3>Hola, soy {{ person.name }} y tengo {{ person.age }}</h3>
@@ -58,25 +58,23 @@
     {{ i }}: {{ name }}
     <button (click)="deleteName(i)">Delete</button>
   </li>
-</ul>
-
-<hr>
-<div>
+</ul> -->
+<h1>*ngFor Objs</h1>
+<div class="products--grid">
   <div *ngFor="let product of products">
-    <img width="100" [src]="product.image" alt="Image">
+    <img [src]="product.image" alt="Image">
     <h2>{{ product.price }}</h2>
     <p>{{ product.name }}</p>
-    <hr>
   </div>
 </div>
 
-<hr>
+<!-- <hr> -->
 
-<h1>*ngSwitch</h1>
+<!-- <h1>*ngSwitch</h1>
 <input type="text" required [(ngModel)]="person.name">
 <div [ngSwitch]="person.name">
   <p *ngSwitchCase="'Juan'">La persona es Juan</p>
   <p *ngSwitchCase="'David'">La persona es David</p>
   <p *ngSwitchCase="'Julian'">La persona es Julian</p>
   <p *ngSwitchDefault="">Cualquier otra persona</p>
-</div>
+</div> -->
