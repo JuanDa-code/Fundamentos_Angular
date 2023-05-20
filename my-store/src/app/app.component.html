@@ -59,3 +59,13 @@
     <button (click)="deleteName(i)">Delete</button>
   </li>
 </ul>
+
+<hr>
+<div>
+  <div *ngFor="let product of products">
+    <img width="100" [src]="product.image" alt="Image">
+    <h2>{{ product.price }}</h2>
+    <p>{{ product.name }}</p>
+    <hr>
+  </div>
+</div>
