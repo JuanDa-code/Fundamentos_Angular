@@ -69,3 +69,14 @@
     <hr>
   </div>
 </div>
+
+<hr>
+
+<h1>*ngSwitch</h1>
+<input type="text" required [(ngModel)]="person.name">
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'Juan'">La persona es Juan</p>
+  <p *ngSwitchCase="'David'">La persona es David</p>
+  <p *ngSwitchCase="'Julian'">La persona es Julian</p>
+  <p *ngSwitchDefault="">Cualquier otra persona</p>
+</div>
