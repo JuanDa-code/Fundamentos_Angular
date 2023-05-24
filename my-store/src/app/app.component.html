@@ -1,4 +1,4 @@
-<!-- <h1>Hola mundo</h1>
+<h1>Hola mundo</h1>
 <h2>{{ 'Hola mundo'.repeat(5) }}</h2>
 <p>3 + 3 = {{ 3 + 3 }}</p>
 <h3>Hola, soy {{ person.name }} y tengo {{ person.age }}</h3>
@@ -58,7 +58,7 @@
     {{ i }}: {{ name }}
     <button (click)="deleteName(i)">Delete</button>
   </li>
-</ul> -->
+</ul>
 <h1>*ngFor Objs</h1>
 <div class="products--grid">
   <div *ngFor="let product of products">
@@ -68,16 +68,16 @@
   </div>
 </div>
 
-<!-- <hr> -->
+<hr>
 
-<!-- <h1>*ngSwitch</h1>
+<h1>*ngSwitch</h1>
 <input type="text" required [(ngModel)]="person.name">
 <div [ngSwitch]="person.name">
   <p *ngSwitchCase="'Juan'">La persona es Juan</p>
   <p *ngSwitchCase="'David'">La persona es David</p>
   <p *ngSwitchCase="'Julian'">La persona es Julian</p>
   <p *ngSwitchDefault="">Cualquier otra persona</p>
-</div> -->
+</div>
 
 <hr>
 
@@ -96,5 +96,34 @@
   </div>
   <div>
     <img [style.width.px]="widthImg" [src]="person.avatar">
+  </div>
+</div>
+
+<hr>
+
+<h1>NgClass and NgStyle</h1>
+<input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name">
+<hr class="line-error" [ngClass]="{
+    'valid': nameInput4.valid,
+    'invalid': nameInput4.invalid
+  }"
+>
+<p class="message-error" [class.invalid]="nameInput4.invalid">
+  El campo es requerido
+</p>
+
+<div class="boxImage">
+  <div>
+    <input type="number" [(ngModel)]="box.width">
+    <input type="number" [(ngModel)]="box.height">
+    <input type="color" [(ngModel)]="box.background">
+  </div>
+  <div>
+    <div [ngStyle]="{
+      'width.px': box.width,
+      'height.px': box.height,
+      'background-color': box.background,
+      'display': 'block',
+    }"></div>
   </div>
 </div>
