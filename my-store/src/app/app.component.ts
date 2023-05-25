@@ -10,6 +10,12 @@ import { Product } from './product.model'
 export class AppComponent {
   widthImg = 10;
 
+  register = {
+    name: '',
+    email: '',
+    password: '',
+  }
+
   btnDisabled = true;
   person = {
     name: 'Juan',
@@ -85,5 +91,10 @@ export class AppComponent {
 
   deleteName(index: number) {
     this.names.splice(index, 1);
+  }
+
+  onRegister() {
+    console.log(this.register);
+
   }
 }
