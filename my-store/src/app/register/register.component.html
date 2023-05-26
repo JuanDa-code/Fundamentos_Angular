@@ -1,0 +1,29 @@
+<div class="card text-center">
+  <div class="card-header">
+    <h1 class="card-title">Create your account</h1>
+  </div>
+  <div class="card-body d-flex justify-content-center align-items-center">
+    <form class="row mb-3" #myFormRegister="ngForm" (ngSubmit)="onRegister()">
+      <div class="col-6 form-floating mb-3">
+        <input type="text" required autocomplete="off" class="form-control {{ isInvalid }}" id="inputName" name="name" [(ngModel)]="registerForm.name" placeholder="Name">
+        <label for="inputEmail">Name</label>
+      </div>
+      <div class="col-6 form-floating mb-3">
+        <input type="email" required autocomplete="off" class="form-control {{ isInvalid }}" id="inputEmail" name="email" [(ngModel)]="registerForm.email" placeholder="Email">
+        <label for="inputEmail">Email</label>
+      </div>
+      <div class="col-12 form-floating mb-3">
+        <input type="password" required autocomplete="off" class="form-control {{ isInvalid}}" id="inputPassword" name="password" [(ngModel)]="registerForm.password" placeholder="Password">
+        <label for="inputPassword">Password</label>
+      </div>
+      <div *ngIf="messageError != ''" class="alert alert-danger" role="alert">
+        <img src="../../assets/icons/warning.png" alt="Warning" width="30px">
+        {{ messageError }}
+      </div>
+      <button type="submit" [disabled]="myFormRegister.invalid" class="btn btn-outline-success">Register</button>
+    </form>
+  </div>
+  <div class="card-footer">
+    <button type="button" class="btn btn-outline-warning">Log in</button>
+  </div>
+</div>
